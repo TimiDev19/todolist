@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: #1d2630;
+    background: var(--bg-color);
     height: 35%;
     width: 540px;
     position: absolute;
@@ -17,28 +17,33 @@ body{
     border-radius: 8px;
 }
 
+:root{
+    --bg-color: #1f242d;
+    --button-color: #19A68C;
+    --body-color: white;
+}
+
 #newtask{
     position: relative;
     padding: 30px 15px;
-    background: #fff;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    background: var(--body-color);
 }
 
 #newtask input{
     border-radius: .1rem;
     width: 70%;
     height: 45px;
-    font-size: 15px;
+    font-size: 16px;
     border: 2px solid #d1d3d4;
     padding: 12px;
-    color: #111111;
+    color: var(--bg-color);
     font-weight: 500;
     position: relative;
 }
 
 #newtask input:focus{
     outline: none;
-    border-color: #19A68C;
+    border-color: var(--button-color);
 }
 
 #newtask button{
@@ -48,12 +53,16 @@ body{
     height: 45px;
     border-radius: 3px;
     font-size: 16px;
-    background: #19A68C;
+    background: var(--button-color);
     color: #fff;
     border: none;
     outline: none;
     cursor: pointer;
     padding: 2px 4px;
+}
+
+#newtask button:hover{
+    box-shadow: 0 0 1rem var(--button-color);
 }
 
 #tasks{
@@ -97,4 +106,9 @@ body{
 .completed{
     text-decoration: line-through;
     opacity: 0.7;
+}
+
+.delete i{
+    color: var(--bg-color);
+    font-size: 16px;
 }
